@@ -281,6 +281,9 @@ init_screen() {
 
 
 main() {
+    # simple clear screen after -d option is used
+    clear
+    
     # simple pre-check of TERM, tput's error message should be enough
     tput -T "$TERM" sgr0 >/dev/null || return $?
 
